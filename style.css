@@ -120,6 +120,30 @@ footer {
 
     footer {
         padding: 10px;
-        font-size: 14px;
+        font-size: 14px; 
+/* Hero Section */
+.hero {
+    background: url('images/udaipur.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
     }
 }
