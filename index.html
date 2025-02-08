@@ -1,171 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Notes Hub</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background: #f5f5f5;
-            color: #333;
-        }
-        .hero {
-            background: url('images/background.jpg') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-        .hero h1 {
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #222;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .nav a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            font-size: 1.1em;
-            transition: 0.3s;
-        }
-        .nav a:hover {
-            background: #ff9800;
-            border-radius: 5px;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 30px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .card h2 {
-            margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 20px;
-            background: #ff9800;
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #e68900;
-        }
-        .doubt-section {
-            width: 90%;
-            max-width: 1200px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-        }
-        .doubt-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .doubt-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .doubt-form input, .doubt-form textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .doubt-form button {
-            padding: 10px;
-            background: #ff9800;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .doubt-form button:hover {
-            background: #e68900;
-        }
-    </style>
-</head>
-<body>
-    <div class="hero">
-        <h1>Welcome to University Notes Hub</h1>
-        <p>Your ultimate resource for B.Com notes, question papers, and study materials.</p>
-    </div>
-    
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="quick-notes.html">Quick Notes</a>
-        <a href="handwritten-notes.html">Handwritten Notes</a>
-        <a href="old-question-papers.html">Old Question Papers</a>
-        <a href="doubt-solve.html">Doubt Solve</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    
-    <div class="container">
-        <div class="card">
-            <h2>Quick Notes</h2>
-            <p>Access concise and easy-to-understand notes for all subjects.</p>
-            <a class="btn" href="quick-notes.html">View Notes</a>
-        </div>
-        <div class="card">
-            <h2>Handwritten Notes</h2>
-            <p>Download detailed handwritten notes in PDF format.</p>
-            <a class="btn" href="handwritten-notes.html">Download PDFs</a>
-        </div>
-        <div class="card">
-            <h2>Old Question Papers</h2>
-            <p>Prepare for exams with past years' question papers.</p>
-            <a class="btn" href="old-question-papers.html">View Papers</a>
-        </div>
-    </div>
-    
-    <div class="doubt-section">
-        <h2>Doubt Solve Section</h2>
-        <form class="doubt-form">
-            <input type="text" placeholder="Enter your name" required>
-            <textarea placeholder="Ask your doubt here..." rows="4" required></textarea>
-            <button type="submit">Submit Doubt</button>
-        </form>
-    </div>
-</body>
-</html>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background: #f5f5f5;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+.nav a:hover {
+    background: #ff9800;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav a {
+        display: block;
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+/* Content Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.card h2 {
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #e68900;
+}
+
+/* Doubt Section */
+.doubt-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.doubt-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.doubt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.doubt-form input,
+.doubt-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.doubt-form button {
+    padding: 12px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+.doubt-form button:hover {
+    background: #e68900;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+        padding: 10px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+}
