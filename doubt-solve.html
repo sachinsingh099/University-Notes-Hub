@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Solve</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #222;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        button {
+            background: #ff9800;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2em;
+            border: none;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+        .doubt-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .doubt {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        }
+        .answer {
+            background: #e1f5fe;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doubt Solve Section</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <textarea id="doubt" placeholder="Ask your doubt here..."></textarea>
+        <button onclick="submitDoubt()">Submit Doubt</button>
+        <div class="doubt-list" id="doubtList"></div>
+    </div>
+    
+    <script>
+        function submitDoubt() {
+            let name = document.getElementById('name').value;
+            let doubt = document.getElementById('doubt').value;
+            if (name === '' || doubt === '') {
+                alert('Please enter your name and doubt.');
+                return;
+            }
+            let doubtList = document.getElementById('doubtList');
+            let newDoubt = document.createElement('div');
+            newDoubt.classList.add('doubt');
+            newDoubt.innerHTML = `<strong>${name}:</strong> ${doubt} <br><button onclick="addAnswer(this)">Answer</button><div class='answer-section'></div>`;
+            doubtList.prepend(newDoubt);
+            document.getElementById('name').value = '';
+            document.getElementById('doubt').value = '';
+        }
+
+        function addAnswer(button) {
+            let answerName = prompt("Enter your name:");
+            let answerText = prompt("Enter your answer:");
+            if (answerName && answerText) {
+                let answerDiv = document.createElement('div');
+                answerDiv.classList.add('answer');
+                answerDiv.innerHTML = `<strong>${answerName}:</strong> ${answerText}`;
+                button.nextElementSibling.appendChild(answerDiv);
+            }
+        }
+    </script>
+</body>
+</html>

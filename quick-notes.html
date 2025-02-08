@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Notes Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f4f4f9;
+            color: #333;
+        }
+        .hero {
+            background: url('images/background.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #222;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 18px;
+            font-size: 1.2em;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        .nav a:hover {
+            background: #ff9800;
+            transform: scale(1.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 1.6em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e68900;
+            transform: scale(1.1);
+        }
+        .quick-notes {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .quick-notes h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .note-card {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 1.2em;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .note-card:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to University Notes Hub</h1>
+        <p>Your ultimate resource for B.Com notes, question papers, and study materials.</p>
+    </div>
+    
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="quick-notes.html">Quick Notes</a>
+        <a href="handwritten-notes.html">Handwritten Notes</a>
+        <a href="old-question-papers.html">Old Question Papers</a>
+        <a href="doubt-solve.html">Doubt Solve</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="quick-notes">
+        <h2>Quick Notes</h2>
+        <div class="note-card">B.Com 1st Year (Sorry, notes not available)</div>
+        <div class="note-card">B.Com 2nd Year (Sorry, notes not available)</div>
+        <div class="note-card"><a href="bcom-3rd-year.html" class="btn">B.Com 3rd Year - View Subjects</a></div>
+    </div>
+</body>
+</html>
