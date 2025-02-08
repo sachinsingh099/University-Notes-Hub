@@ -1,169 +1,69 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Notes Hub</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
 
-/* Body */
-body {
-    background: #f5f5f5;
-    color: #333;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="quick-notes.html">Quick Notes</a>
+        <a href="previous-papers.html">Previous Papers</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="doubts.html">Ask Doubts</a>
+    </nav>
 
-/* Hero Section */
-.hero {
-    background: url('images/background.jpg') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-.hero h1 {
-    font-size: 3em;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-.hero p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to University Notes Hub</h1>
+        <p>Your One-Stop Solution for Study Materials & Notes</p>
+    </section>
 
-/* Navigation Bar */
-.nav {
-    display: flex;
-    justify-content: space-around;
-    background: #222;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-}
-.nav a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 15px;
-    font-size: 1.1em;
-    transition: 0.3s;
-}
-.nav a:hover {
-    background: #ff9800;
-    border-radius: 5px;
-}
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Quick Notes Section -->
+        <div class="card">
+            <h2>Quick Notes</h2>
+            <p>Get summarized notes for quick revision.</p>
+            <a href="quick-notes.html" class="btn">View Notes</a>
+        </div>
 
-/* Mobile Navigation */
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    .nav a {
-        display: block;
-        padding: 10px;
-        font-size: 1em;
-    }
-}
+        <!-- Previous Papers Section -->
+        <div class="card">
+            <h2>Previous Papers</h2>
+            <p>Access past year question papers for better preparation.</p>
+            <a href="previous-papers.html" class="btn">View Papers</a>
+        </div>
 
-/* Content Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
+        <!-- Study Materials Section -->
+        <div class="card">
+            <h2>Study Materials</h2>
+            <p>Download study materials and resources.</p>
+            <a href="study-materials.html" class="btn">View Materials</a>
+        </div>
 
-/* Card Styles */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-.card h2 {
-    margin-bottom: 10px;
-}
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 20px;
-    background: #ff9800;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.btn:hover {
-    background: #e68900;
-}
+        <!-- Doubt Solving Section -->
+        <div class="card">
+            <h2>Ask Your Doubts</h2>
+            <p>Have a question? Get answers from experts.</p>
+            <a href="doubts.html" class="btn">Ask Now</a>
+        </div>
+    </div>
 
-/* Doubt Section */
-.doubt-section {
-    width: 90%;
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-.doubt-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.doubt-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.doubt-form input,
-.doubt-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.doubt-form button {
-    padding: 12px;
-    background: #ff9800;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.1em;
-    transition: 0.3s;
-}
-.doubt-form button:hover {
-    background: #e68900;
-}
+    <!-- Doubt Submission Section -->
+    <section class="doubt-section">
+        <h2>Ask Your Doubts</h2>
+        <form class="doubt-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Type your doubt here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .hero {
-        height: 50vh;
-        padding: 10px;
-    }
-    .hero h1 {
-        font-size: 2em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
-}
+</body>
+</html>
