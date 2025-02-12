@@ -31,6 +31,9 @@
             padding: 0;
             text-align: center;
             background-color: #e3f2fd;
+            min-height: 100vh; /* Ensures the page takes full height */
+            display: flex;
+            flex-direction: column;
         }
 
         /* Advanced Header */
@@ -52,6 +55,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1; /* Allows the content to grow and enable scrolling */
+            margin-bottom: 50px; /* Adds space at the bottom */
         }
 
         .note-card {
