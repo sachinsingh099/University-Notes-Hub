@@ -3,29 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Notes Hub</title>
+    <title>Quick Notes - University Notes Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero">
-        <h1>Welcome to University Notes Hub</h1>
-        <p>Your ultimate resource for B.Com notes, question papers, and study materials.</p>
-    </div>
-    
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="quick-notes.html">Quick Notes</a>
-        <a href="handwritten-notes.html">Handwritten Notes</a>
-        <a href="old-question-papers.html">Old Question Papers</a>
-        <a href="doubt-solve.html">Doubt Solve</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    
+
+    <!-- Advanced Header -->
+    <header class="advanced-header">
+        <div class="logo">
+            <h1>University Notes Hub</h1>
+        </div>
+    </header>
+
+    <!-- Quick Notes Section -->
     <div class="quick-notes">
         <h2>Quick Notes</h2>
         <div class="note-card">B.Com 1st Year (Sorry, notes not available)</div>
         <div class="note-card">B.Com 2nd Year (Sorry, notes not available)</div>
         <div class="note-card"><a href="bcom-3rd-year.html" class="btn">B.Com 3rd Year - View Subjects</a></div>
     </div>
+
+    <!-- Custom Styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Advanced Header */
+        .advanced-header {
+            background: linear-gradient(to right, #ff9800, #ff5722);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Quick Notes Section */
+        .quick-notes {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-card {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: white;
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 2px solid #ff9800;
+        }
+
+        .btn:hover {
+            background: #ff9800;
+            color: white;
+        }
+    </style>
+
 </body>
 </html>
