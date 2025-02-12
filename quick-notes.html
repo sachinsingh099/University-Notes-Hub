@@ -31,7 +31,7 @@
             padding: 0;
             text-align: center;
             background-color: #e3f2fd;
-            min-height: 100vh; /* Ensures the page takes full height */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -40,9 +40,9 @@
         .advanced-header {
             background: linear-gradient(to right, #2196f3, #64b5f6);
             color: white;
-            padding: 20px 0;
+            padding: 10px 0; /* Reduced padding to make header shorter */
             text-align: center;
-            font-size: 24px;
+            font-size: 20px; /* Reduced font size */
             font-weight: bold;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -50,13 +50,12 @@
         /* Quick Notes Section */
         .quick-notes {
             max-width: 600px;
-            margin: 30px auto;
+            margin: 50px auto; /* Increased margin to create more space from header */
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Allows the content to grow and enable scrolling */
-            margin-bottom: 50px; /* Adds space at the bottom */
+            flex-grow: 1;
         }
 
         .note-card {
